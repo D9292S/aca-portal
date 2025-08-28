@@ -228,8 +228,8 @@ This project is proprietary to Kamla Nehru Institute of Technology.
 ## 📧 Support
 
 For technical support or questions:
-- Email: webmaster@knit.ac.in
-- Development Team: developers@knit.ac.in
+- Email: deepankarkumar120@gmail.com
+- Development Team: github.com/D9292S
 
 ---
 
