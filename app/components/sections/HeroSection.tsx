@@ -40,12 +40,12 @@ const AnimatedStatistic: React.FC<StatisticProps> = ({ icon, value, label, suffi
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="text-center bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"
+      className="text-center bg-white/15 backdrop-blur-md rounded-xl p-6 border border-white/30 shadow-xl hover:bg-white/20 transition-all duration-300 group"
     >
-      <div className="text-3xl mb-2 text-white">
+      <div className="text-3xl mb-3 text-white group-hover:scale-110 transition-transform duration-300">
         {icon}
       </div>
-      <div className="text-4xl font-bold text-white mb-1">
+      <div className="text-3xl md:text-4xl font-bold text-white mb-2">
         {count.toLocaleString()}{suffix}
       </div>
       <div className="text-white/80 text-sm font-medium">
@@ -107,7 +107,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onVirtualTour, onApplyNow }) 
   }, [announcements.length]);
 
   return (
-    <section className="relative h-screen overflow-hidden">
+    <section className="relative min-h-screen overflow-hidden pt-10 pb-8">
       {/* Background Video/Image */}
       <div className="absolute inset-0">
         {/* Replace with actual video when available */}
@@ -131,14 +131,14 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onVirtualTour, onApplyNow }) 
       </div>
 
       {/* Content Container */}
-      <div className="relative h-full flex flex-col justify-center items-center text-center px-4 z-10">
+      <div className="relative h-full flex flex-col justify-center items-center text-center px-4 z-10 py-8">
         {/* Announcement Ticker */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mb-8 w-full max-w-4xl"
+          className="mb-8 mt-0 w-full max-w-4xl"
         >
-          <div className="bg-red-600/90 backdrop-blur-sm rounded-lg px-6 py-3 shadow-lg">
+          <div className="bg-red-600/90 backdrop-blur-sm rounded-lg px-6 py-3 shadow-lg border border-red-500/30">
             <div className="flex items-center justify-center">
               <div className="bg-white text-red-600 px-2 py-1 rounded-md text-xs font-bold mr-3">
                 NEWS
@@ -232,7 +232,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onVirtualTour, onApplyNow }) 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.6 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-4xl"
+          className="grid grid-cols-2 md:grid-cols-4 gap-6 w-full max-w-5xl mt-8"
         >
           {statistics.map((stat, index) => (
             <motion.div
@@ -254,11 +254,11 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onVirtualTour, onApplyNow }) 
 
       {/* Scroll Indicator */}
       <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
+        className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20"
+        animate={{ y: [0, 8, 0] }}
+        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
       >
-        <div className="w-1 h-16 bg-gradient-to-b from-white/60 to-transparent rounded-full" />
+        <div className="w-1 h-12 bg-gradient-to-b from-white/60 to-transparent rounded-full shadow-lg" />
       </motion.div>
     </section>
   );

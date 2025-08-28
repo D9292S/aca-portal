@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import HeroSection from './components/sections/HeroSection';
+import KeyFeaturesSection from './components/sections/KeyFeaturesSection';
 import LeadershipSection, { sampleLeadershipData } from './components/sections/LeadershipSection';
 import NewsEventsSection from './components/sections/NewsEventsSection';
 import { FaGraduationCap, FaUsers, FaFlask, FaBriefcase, FaBook, FaUserGraduate, FaAward, FaGlobe } from 'react-icons/fa';
@@ -95,84 +96,8 @@ export default function Home() {
       {/* Enhanced Hero Section */}
       <HeroSection onVirtualTour={handleVirtualTour} onApplyNow={handleApplyNow} />
 
-      {/* Key Features Grid - as per REDESIGN_PLAN.md */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {/* Research */}
-            <Link href="/research" className="group">
-              <div className="bg-gradient-to-br from-blue-500 to-blue-700 p-8 rounded-xl text-white text-center transform group-hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl">
-                <FaFlask className="mx-auto mb-4 text-4xl" />
-                <h3 className="text-xl font-bold mb-2">RESEARCH</h3>
-                <p className="text-sm opacity-90">Innovation & Discovery</p>
-              </div>
-            </Link>
-
-            {/* Startups */}
-            <Link href="/startups" className="group">
-              <div className="bg-gradient-to-br from-green-500 to-green-700 p-8 rounded-xl text-white text-center transform group-hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl">
-                <FaBriefcase className="mx-auto mb-4 text-4xl" />
-                <h3 className="text-xl font-bold mb-2">STARTUPS</h3>
-                <p className="text-sm opacity-90">Entrepreneurship Hub</p>
-              </div>
-            </Link>
-
-            {/* News */}
-            <Link href="/news" className="group">
-              <div className="bg-gradient-to-br from-red-500 to-red-700 p-8 rounded-xl text-white text-center transform group-hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl">
-                <FaGlobe className="mx-auto mb-4 text-4xl" />
-                <h3 className="text-xl font-bold mb-2">NEWS</h3>
-                <p className="text-sm opacity-90">Latest Updates</p>
-              </div>
-            </Link>
-
-            {/* Achievements */}
-            <Link href="/achievements" className="group">
-              <div className="bg-gradient-to-br from-purple-500 to-purple-700 p-8 rounded-xl text-white text-center transform group-hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl">
-                <FaAward className="mx-auto mb-4 text-4xl" />
-                <h3 className="text-xl font-bold mb-2">ACHIEVEMENTS</h3>
-                <p className="text-sm opacity-90">Excellence Record</p>
-              </div>
-            </Link>
-
-            {/* Academics */}
-            <Link href="/academics" className="group">
-              <div className="bg-gradient-to-br from-indigo-500 to-indigo-700 p-8 rounded-xl text-white text-center transform group-hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl">
-                <FaBook className="mx-auto mb-4 text-4xl" />
-                <h3 className="text-xl font-bold mb-2">ACADEMICS</h3>
-                <p className="text-sm opacity-90">Programs & Courses</p>
-              </div>
-            </Link>
-
-            {/* Admissions */}
-            <Link href="/admissions" className="group">
-              <div className="bg-gradient-to-br from-orange-500 to-orange-700 p-8 rounded-xl text-white text-center transform group-hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl">
-                <FaGraduationCap className="mx-auto mb-4 text-4xl" />
-                <h3 className="text-xl font-bold mb-2">ADMISSIONS</h3>
-                <p className="text-sm opacity-90">Join KNIT</p>
-              </div>
-            </Link>
-
-            {/* Placements */}
-            <Link href="/placements" className="group">
-              <div className="bg-gradient-to-br from-teal-500 to-teal-700 p-8 rounded-xl text-white text-center transform group-hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl">
-                <FaBriefcase className="mx-auto mb-4 text-4xl" />
-                <h3 className="text-xl font-bold mb-2">PLACEMENTS</h3>
-                <p className="text-sm opacity-90">Career Success</p>
-              </div>
-            </Link>
-
-            {/* Alumni */}
-            <Link href="/alumni" className="group">
-              <div className="bg-gradient-to-br from-pink-500 to-pink-700 p-8 rounded-xl text-white text-center transform group-hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl">
-                <FaUserGraduate className="mx-auto mb-4 text-4xl" />
-                <h3 className="text-xl font-bold mb-2">ALUMNI</h3>
-                <p className="text-sm opacity-90">Success Stories</p>
-              </div>
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* Key Features Grid - Enhanced as per REDESIGN_PLAN.md */}
+      <KeyFeaturesSection />
 
       {/* Leadership Showcase */}
       <LeadershipSection members={sampleLeadershipData} />
